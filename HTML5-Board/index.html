@@ -1,0 +1,129 @@
+﻿<!doctype html>
+
+<html>
+     <head>
+	     <title>模拟在线画板</title>
+		 <meta charset="utf-8" />
+		 <link type="text/css" href="css/style.css" rel="stylesheet" />
+		
+	 </head>
+	 <body id="body">
+	 
+	     <!--头部开始-->
+	      <header> 
+		      <h1>在线画板</h1>
+		  </header>
+		 <!--头部结束-->
+		 <div id="setting">
+		    <div id="color1">
+				<input type="button" value="默认设置" id="Default"/>
+				<span>选择背景颜色：</span><br />
+				<input type="color" id="bg-color" value="#ADD8E6"/>
+				<span>选择边框颜色：</span><br />
+				<input type="color" id="border-color" value="#8FBC8F"/>
+			</div>
+			<div id="options">
+			   <img id ="img_set"  src="images/options_button.png"/>
+            </div>
+		 </div>
+		 <!--内容开始-->
+		  <section>
+		      <div id="container">
+			     <div id="div1"> 
+				    <ul class="nav">
+					   <!--菜单中的第一项图片-->
+					    <li class="menu" id="image">
+						   <p>图像</p>
+						   <ul class="menu-image">
+						       <li id="save">保存图片</li>
+							   <li id="clear">清空画布</li>
+						   </ul>
+						</li>
+						<!----------end------------->
+						
+						 <!--菜单中的第二项工具-->
+						<li class="menu" id="tool">
+						   <p>工具</p>
+						   <ul class="menu-tool">
+						      <li id="Brush"><img src="images/Brush.png"/></li>
+							  <li id="Eraser"><img src="images/Eraser.png"/></li>
+							  <li id="Paint"><img src="images/Paint.png"/></li>
+							  <li id="Straw"><img src="images/Straw.png"/></li>
+							  <li id="text"><img src="images/text.png"/></li>
+							  <li id="Magnifier"><img src="images/Magnifier.png"/></li>
+						   </ul>
+						</li>
+						<!----------end------------->
+						
+						
+						 <!--菜单中的第三项形状-->
+						
+						<li class="menu" id="shape">
+						   <p>形状</p>
+						   <ul class="menu-shape">
+						      <li id="line"><img src="images/line.png"/></li>
+							  <li id="arc"><img src="images/arc.png"/></li>
+							  <li id="rect"><img src="images/rect.png"/></li>
+							  <li id="poly"><img src="images/poly.png"/></li>
+							  <li id="arcfill"><img src="images/arcfill.png"/></li>
+							  <li id="rectfill"><img src="images/rectfill.png"/></li>
+						   </ul>
+						</li>
+						<!----------end------------->
+						
+						
+						 <!--菜单中的第四项线条-->
+						<li class="menu" id="line">
+						   <p>线条</p>
+						    <ul class="menu-line">
+						      <li id="1px"><img src="images/line1px.png"/></li>
+							  <li id="3px"><img src="images/line3px.png"/></li>
+							  <li id="5px"><img src="images/line5px.png"/></li>
+							  <li id="8px"><img src="images/line8px.png"/></li>
+						   </ul>
+						   
+						</li>
+						<!----------end------------->
+						
+						
+						 <!--菜单中的第五项颜色-->
+						<li class="menu" id="color">
+						
+						   <p>颜色</p>
+						   <ul class="menu-color">
+						      <li  id="red"></li>
+							  <li  id="green"></li>
+							  <li  id="blue"></li>
+							  <li  id="yellow"></li>
+							  <li  id="pink"></li>
+							  <li  id="purple"></li>
+							  <li  id="black"></li>
+							  <li  id="orange"></li>
+							  <li  id="cyan"></li>
+							  <li  id="white"></li>
+						   </ul>
+						   <small>当前颜色:</small>
+						   <ul class="menu-current-color">
+						      <li id="current-color"></li>
+						   </ul>
+						   
+						</li>
+						<!----------end------------->
+					</ul>
+				 </div> 
+				 <div id="div2"> 
+				     <canvas width="860" height="600" id="canvas" style="background:#fff">
+					      您的浏览器不支持canvas标签，请您尽快更新浏览器
+					 </canvas>
+				 </div>
+			  </div>
+		  </section>
+		  <!--内容结束-->
+		  
+		  <footer>
+             <small>版权所有  @西安电子科技大学</small>
+		  </footer>
+	 <script type="text/javascript" language="javascript" src="js/jquery-2.1.4.js"></script>
+     <script type="text/javascript" language="javascript" src="js/canvas2.js"></script>
+	 </body>   
+</html>

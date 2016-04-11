@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+    <head>
+	   <meta charset="utf-8">
+	   <link rel="stylesheet" href="css/style.css" style="text/css">
+	   <script language="javascript" type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	   <script language="javascript" type="text/javascript" src="js/move4.js"></script>
+	   <script>
+	      window.onload=function()
+		   {
+		       /*无缝滚动*/
+			   var oul1=document.getElementById("img_scroll");
+			   oul1.innerHTML+=oul1.innerHTML;
+			   var oli=oul1.getElementsByTagName("li");
+			   var oimg=document.getElementsByClassName("gimg");
+			  
+			   var speed;
+			   var timer=setInterval( function(){
+                    var speed=-8;//左移
+					var offsetleft=oul1.offsetLeft;
+					var width=oul1.offsetWidth;
+					oul1.style.left=(offsetleft+speed)+"px";
+                    if(offsetleft<=-width/2)
+					{
+					   oul1.style.left=0;
+					}
+					},30);
+			
+			   /*设置鼠标移动到图片上的情况*/
+			   for(var i=0;i<oli.length;i++)
+			   {
+			       oimg[i].onmouseover=function(){
+				        clearInterval(timer);//移动到图片关闭定时器
+						for(var k=0;k<oimg.length;k++)
+						{
+						  startMove(oimg[k],{opacity:50});/*设置透明度*/
+						}
+						  startMove(this,{opacity:100});
+				   }
+				   oimg[i].onmouseout=function(){
+				          startMove(this,{opacity:50});/*设置透明度*/	
+				           timer=setInterval( function(){
+							var speed=-8;//左移
+							var offsetleft=oul1.offsetLeft;
+							var width=oul1.offsetWidth;
+							oul1.style.left=(offsetleft+speed)+"px";
+							if(offsetleft<=(-width)/2)
+							{
+							   oul1.style.left=0;
+							}
+							},30);
+						  }
+				   }
+			   }
+		  
+	   </script>
+	</head>
+	<body>
+	    <header>
+		   <div id="head1">
+				<div id="head2">
+				   <div id="logo">
+					   <img src="images/logo.png"><span>炫美网站大全</span>
+				   </div>
+				   <div id="s">
+				     <form>
+					   <input type="text" value="" id="search"/>
+					   <input type="submit" value="搜索" id="se-button"/>
+					 </form>
+				   </div>
+				</div>
+		   </div>
+		   <div id="nav">
+		        <ul>
+				   <li id="page"><a href="#" class="current">首页</a></li>
+				   <li id="zhan"><a href="submit.html">提交站点</a></li>
+				   <li id="beau"><a href="beauty.php">炫美网站</a></li>
+				</ul>
+		   </div>
+		  
+		   <div id="nav-img">
+		      <div id="runplay">
+				<div id="gdong">
+					<ul id="img_scroll">
+						<li>
+						   <a href="#"><img class="gimg" src="images/1.jpg" /></a>
+						</li>
+						<li>
+						   <a href="#"><img class="gimg" src="images/2.jpg" /></a>
+						</li>
+						<li>
+						   <a href="#"><img class="gimg" src="images/3.jpg" /></a>
+						</li>
+					</ul>
+				</div>
+			 </div>
+		   </div>
+		</header>
+		<section>
+		    <div id="main">
+			   <div id="main1">
+			        <div id="left">
+					   <div id="left1">
+					      <dl>
+						     <dt>美站库</dt>
+							 <dd>美站库是<a href="#">私房库</a>时频html课程中的第一个项目实战课！</dd>
+						  </dl>
+					   </div>
+					   <p>炫美站点</p>
+					   <div id="left2">
+					       <ul>
+						       <li>
+							      <a href="#"><img src="images/image_04.jpg" /></a>
+								  <p>旅游网</p>
+							   </li>
+							   <li>
+							      <a href="#"><img src="images/image_04.jpg" /></a>
+								  <p>美食网</p>
+							   </li>
+							   <li>
+							      <a href="#"><img src="images/image_04.jpg" /></a>
+								  <p>求职网</p>
+							   </li>
+							   <li>
+							      <a href="#"><img src="images/image_04.jpg" /></a>
+								  <p>体育网</p>
+							   </li>
+							   <li>
+							      <a href="#"><img src="images/image_04.jpg" /></a>
+								  <p>购物网</p>
+							   </li>
+						   </ul>
+					   </div>
+					   <div id="se-inter">
+					       <a href="#">查看更多</a>
+					   </div>
+					</div>
+					<div id="right">
+					    <div id="right1">
+					       <p>酷文</p>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   随便写随便写的随便写的随便写点什么呢随便写的……
+							  </dd>
+						   </dl>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。
+							  </dd>
+						   </dl>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   衣带渐宽终不悔，为伊消得人憔悴。
+							  </dd>
+						   </dl>
+						</div>
+						<div id="right2">
+						     <div id="right21">
+							    <h2>随便写点</h2>
+								<p>小鸡吃米，萌萌哒!</p>
+							 </div>
+							 <div id="right22">
+							     <img src="images/twitter.png">
+							 </div>
+						</div>
+						<div id="right3">
+						     <div id="right31">
+							    <h2>随便写点</h2>
+								<p>世界上最远的距离!</p>
+							 </div>
+							 <div id="right32">
+							    <img src="images/rss.png">
+							 </div> 
+						</div>
+					</div>
+			   </div>
+			</div>
+		</section>
+		<footer>
+		    <div id="footer-nav">
+			    <ul>
+				   <li>
+				       <small><a href="#">首页</a></small>
+				   </li>
+				   <li>
+				       <small><a href="#">美站</a></small>
+				   </li>
+				    <li>
+				       <small><a href="#">酷文</a></small>
+				   </li>
+				   <li>
+				       <small><a href="#">联系我们</a></small>
+				   </li>
+				</ul>
+			</div>
+			<div id="copyright">
+			   <small>Copyright (c) 2016 | <a href="#">私房库</a></small>
+			</div>
+		</footer>
+	</body>
+</html>

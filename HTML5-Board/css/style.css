@@ -1,0 +1,313 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+body
+	{
+		background:#ADD8E6;		
+	}
+	
+/*颜色设置*/	
+#setting{
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:-168px;
+}
+#setting #color1{
+	position:absolute;
+	width:160px;
+	height:200px;
+	left:0px;
+	border:4px solid yellow;
+	background:#FFFFF0;
+}
+#setting   #color1 #Default{
+	width:130px;
+	height:30px;
+	margin:10px 10px;
+	font-size:20px;
+	background:#F8F8FF;
+	font-family:华文楷体;
+}
+#setting  #color1 span{
+	font-family:华文楷体;
+	
+	font-size:20px;
+}
+#setting   #color1 input{
+	margin:10px auto;
+	display:block;
+}
+
+
+
+#setting #options{
+	position:absolute;
+	width:40px;
+	height:40px;
+	left:166px;
+	top:-20px;
+}
+#setting #options img{
+	width:40px;
+	height:40px;
+	border:1px #FFF0F5 solid;
+	background:#F8F8FF
+}
+
+/*header模块样式设置*/
+
+header{
+	height:100px;
+}
+h1{
+	font-size:50px;
+	font-family:微软雅黑;
+	font-weight:bold;
+	text-align:center;
+	line-height:100px;
+}
+
+
+/*section模块样式设置*/
+section{
+	width:900px;
+	height:800px;
+	margin:0 auto;
+}
+ #container{
+	width:860px;
+	height:760px;	
+	border:12px solid #8FBC8F;
+	
+}
+ #div1{
+    width:860px;
+	height:150px;
+	background:#eee;
+}
+
+ #div2{
+	width:860px;
+	height:600px;
+	border-top:12px solid #8FBC8F;
+}
+/*section模块中个div的排版样式设置结束*/
+
+/*div1中设置*/
+ul.nav{
+	width:855px;
+	height:150px;
+	
+}
+li.menu{
+	width:170px;
+	height:150px;
+	float:left;
+	border-right:1px solid #F90;
+}
+li.menu p{
+	font-size:24px;
+	text-align:center;
+	border-bottom:2px solid #8FBC8F;
+	font-weight:bold;
+}
+.menu-image{
+	width:170px;
+	height:150px;
+	margin-top:20px;
+	
+}
+.menu-image li{
+	width:70px;
+	height:20px;
+	list-style:square;
+	margin:10px auto;
+	background:#00FF00;
+	border:1px solid black;
+}
+
+#save:hover{
+	border:1px solid white;
+}
+#clear:hover{
+	border:1px solid white;
+}
+
+
+/*tool*/
+.menu-tool{
+	margin:10px 8px;
+	width:170px;
+	height:150px;
+}
+
+.menu-tool li img{
+	width:30px;
+    margin:5px auto;
+}
+.menu-tool li{
+	float:left;
+	width:50px;
+	height:40px;
+	margin:5px auto;
+	border:1px solid black;
+	text-align:center;
+	
+}
+
+/*shape*/
+.menu-shape{
+	margin:10px 8px;
+	width:170px;
+	height:150px;
+}
+.menu-shape li img{
+	width:30px;
+    margin:5px auto;
+}
+.menu-shape li{
+	float:left;
+	width:50px;
+	height:40px;
+	margin:5px auto;
+	border:1px solid black;
+	text-align:center;
+}
+
+
+/*line*/
+.menu-line{
+	width:170px;
+	height:150px;
+}
+
+.menu-line li img{
+	width:160px;
+}
+.menu-line li{
+	width:160px;
+	height:18px;
+	margin:10px auto;
+}
+.menu-color{
+	margin:10px 8px;
+	width:170px;
+	height:60px;
+}
+.menu-color li{
+	float:left;
+	border:2px solid black;
+	margin-right:6px;
+	margin-bottom:6px;
+	width:24px;
+	height:24px;
+}
+.menu-color li#red{
+	background:red;
+}
+.menu-color li#red:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#green{
+	background:green;
+}
+.menu-color li#green:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#yellow{
+	background:yellow;
+}
+.menu-color li#yellow:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#orange{
+	background:orange;
+}
+.menu-color li#orange:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#orange:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#pink{
+	background:pink;
+}
+.menu-color li#pink:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#cyan{
+	background:cyan;
+}
+.menu-color li#cyan:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#blue{
+	background:blue;
+}
+.menu-color li#blue:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#white{
+	background:white;
+}
+.menu-color li#white:hover{
+	border:1px solid #fff;
+}
+
+
+.menu-color li#black{
+	background:black;
+}
+.menu-color li#black:hover{
+	border:1px solid #fff;
+}
+
+.menu-color li#purple{
+	background:purple;
+}
+.menu-color li#purple:hover{
+	border:1px solid #fff;
+}
+
+.menu-current-color{
+	height:20px;
+	width:170px;
+	
+}
+.menu-current-color li{
+	border:1px solid #000;
+	height:20px;
+	width:20px;
+	margin:0 auto;
+}
+.menu small{
+	font-weight:bold;
+	margin-left:50px;
+}
+/*设置当前颜色*/
+
+
+#canvas:hover{
+	cursor:crosshair;/*鼠标悬停时以十字显示*/
+}
+/*color*/
+
+
+
+/*footer模块样式设置*/
+
+footer{
+	height:100px;
+	text-align:center;
+}

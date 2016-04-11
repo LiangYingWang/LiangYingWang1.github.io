@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+	   <meta charset="utf-8">
+	   <link rel="stylesheet" href="css/submit_css.css" style="text/css">
+	   <script language="javascript" type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+	    <header>
+		   <div id="head1">
+				<div id="head2">
+				   <div id="logo">
+					   <img src="images/logo.png"><span>炫美网站大全</span>
+				   </div>
+				   <div id="s">
+				     <form>
+					   <input type="text" value="" id="search"/>
+					   <input type="submit" value="搜索" id="se-button"/>
+					 </form>
+				   </div>
+				</div>
+		   </div>
+		   <div id="nav">
+		        <ul>
+				   <li id="page"><a href="index.html">首页</a></li>
+				   <li id="zhan"><a href="#" class="current">提交站点</a></li>
+				   <li id="beau"><a href="beauty.php">炫美网站</a></li>
+				</ul>
+		   </div>
+		  
+		   <div id="nav-img">
+		      <div id="runplay">
+		        <div id="img1">
+				   <img src="images/img1.jpg">
+				</div>
+				<div id="intro">
+				    <h1>炫美网站，尽在美站库</h1>
+					<p>本网站旨在收集互联网上各种炫美网站……</p>
+					<a href="#">查看更多</a>
+				</div>
+			 </div>
+		   </div>
+		</header>
+		<section>
+		    <div id="main">
+			   <div id="main1">
+			        <div id="left">
+					   <p>如果你感觉你的网站够炫美可以提交给我们!</p>
+					   <div id="internet-intro">
+					      <form action="internet.php" method="POST" name="form1">
+						       <p>您的姓名：</p><input name="username" id="username" type="text" value="" />
+							   <p>您的联系方式：</p><input name="number" id="number" type="number" value="" />
+							   <p>站点网址：</p><input name="url" id="url" type="url" value="" />
+							   <p>站点介绍：</p>
+							   <textarea rows="10" cols="80" name="intro" id="texta"> </textarea><br>
+							   <input type="button" value="提交" class="s1" id="submit" />
+							   <input type="reset" value="重置"  class="s1" id="reset"/>
+					      </form>
+					   </div>
+					</div>
+					<div id="right">
+					    <div id="right1">
+					       <p>酷文</p>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   随便写随便写的随便写的随便写点什么呢随便写的……
+							  </dd>
+						   </dl>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。
+							  </dd>
+						   </dl>
+						   <dl>
+						      <dt><a href="#">随便写点什么</a></dt>
+							  <dd>
+							   衣带渐宽终不悔，为伊消得人憔悴。
+							  </dd>
+						   </dl>
+						</div>
+						<div id="right2">
+						     <div id="right21">
+							    <h2>随便写点</h2>
+								<p>小鸡吃米，萌萌哒!</p>
+							 </div>
+							 <div id="right22">
+							     <img src="images/twitter.png">
+							 </div>
+						</div>
+						<div id="right3">
+						     <div id="right31">
+							    <h2>随便写点</h2>
+								<p>世界上最远的距离!</p>
+							 </div>
+							 <div id="right32">
+							    <img src="images/rss.png">
+							 </div> 
+						</div>
+					</div>
+			   </div>
+			</div>
+		</section>
+		<footer>
+		    <div id="footer-nav">
+			    <ul>
+				   <li>
+				       <small><a href="#">首页</a></small>
+				   </li>
+				   <li>
+				       <small><a href="#">美站</a></small>
+				   </li>
+				    <li>
+				       <small><a href="#">酷文</a></small>
+				   </li>
+				   <li>
+				       <small><a href="#">联系我们</a></small>
+				   </li>
+				</ul>
+			</div>
+			<div id="copyright">
+			   <small>Copyright (c) 2016 | <a href="#">私房库</a></small>
+			</div>
+		</footer>
+		<script>
+		/*运用技术，无跳转的提交数据*/
+		    $(document).ready(function(){
+			     $("#submit").click(function(){
+				     var username=$("#username").val();
+					 var phone=$("#number").val();
+					 var url=$("#url").val();
+					 var content=$("#texta").val();
+					 if(username==""||phone==""||url==""||content="")
+					 {
+					     alert("请输入您的完整信息，谢谢！");
+					 }
+					 else
+					 {
+					  $.post("internet.php",
+                       {
+						username:username,
+						phone:phone,
+						url:url,
+						content:content
+                      }
+					 }
+				 );
+			window.location.href="http://localhost/beautiful_internet/beauty.php";
+			});
+			});
+		</script>
+	</body>
+</html>
